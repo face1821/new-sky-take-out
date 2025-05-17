@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     public Result exceptionHandler(SQLIntegrityConstraintViolationException ex){
-        //Duplicate entry 'chen' for key 'employee.idx_username'
+        //Duplicate entry 'chen' for key 'employee.idx_username'...
         String message = ex.getMessage();
         if(message.contains("Duplicate entry")){
             String[] s = message.split(" ");
